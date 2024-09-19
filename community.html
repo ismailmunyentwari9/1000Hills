@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<style>
+    /* Display the menu when the checkbox is checked */
+    #menu-toggle:checked~#menu {
+        display: block;
+    }
+
+    /* Hide the menu if not checked */
+    #menu:hover {
+        display: block;
+    }
+</style>
+
+<body>
+    <!-- Transparent Navbar -->
+    <nav
+    class="navbar fixed top-0 left-0 w-full px-2  z-20 h-[10vh] flex flex-wrap justify-between items-center py-2 bg-white/90 backdrop-blur-lg shadow-lg transition-all duration-300">
+    <!-- Logo -->
+    <div class="navbar-logo w-2/12">
+      <a href="./index.html">
+        <img class="w-[60px] hover:w-[70px] transition-transform duration-300" src="./images/1000-hills-logo.png"
+          alt="Logo" />
+      </a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <ul class="hidden lg:flex lg:space-x-8 font-600 text-gray-800 uppercase text-sm tracking-wider">
+      <li>
+        <a class="hover:text-green-600 hover:border-b-2 hover:border-green-600 transition-all duration-300"
+          href="./index.html">Home</a>
+      </li>
+      <li>
+        <a class="hover:text-green-600 hover:border-b-2 hover:border-green-600 transition-all duration-300"
+          href="./about.html">About</a>
+      </li>
+      <li>
+        <a class="hover:text-green-600 hover:border-b-2 hover:border-green-600 transition-all duration-300"
+          href="./community.html">Community</a>
+      </li>
+     
+      <li>
+        <a class="hover:text-green-600 hover:border-b-2 hover:border-green-600 transition-all duration-300"
+          href="./events.html">Events<span class="text-yellow-400">&</span>News</a>
+      </li>
+      <li>
+        <a class="hover:text-green-600 hover:border-b-2 hover:border-green-600 transition-all duration-300"
+          href="./register">Contact<span class="text-yellow-400 font-800">/</span>Register</a>
+      </li>
+    </ul>
+
+    <!-- Social Media Links for Desktop -->
+    <div class="hidden lg:flex w-2/12 justify-center space-x-6 text-xl">
+      <a class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+        href="https://www.facebook.com/1000hillsrugby/"><i class="fa-brands fa-facebook-f"></i></a>
+      <a class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+        href="https://www.instagram.com/1000hillsrugby/"><i class="fa-brands fa-instagram"></i></a>
+      <a class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+        href="https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08"><i class="fa-brands fa-x-twitter"></i></a>
+      <a class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+        href="https://www.youtube.com/@1000HillsRugby"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+    <!-- Mobile Menu & Social Media -->
+    <div class="relative lg:hidden flex flex-wrap items-center">
+      <!-- Social Media for Mobile -->
+      <div class="flex space-x-4 mr-4">
+        <a class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+          href="https://www.facebook.com/1000hillsrugby/"><i class="fa-brands fa-facebook-f"></i></a>
+        <a class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+          href="https://www.instagram.com/1000hillsrugby/"><i class="fa-brands fa-instagram"></i></a>
+        <a class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+          href="https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08"><i class="fa-brands fa-x-twitter"></i></a>
+        <a class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+          href="https://www.youtube.com/@1000HillsRugby"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <input type="checkbox" id="menu-toggle" class="hidden" />
+      <label for="menu-toggle" class="cursor-pointer text-2xl text-black">
+        <i class="fa-solid fa-bars" id="menu-open-icon"></i>
+        <i class="fa-solid fa-times hidden" id="menu-close-icon"></i>
+      </label>
+
+      <div id="menu"
+        class="absolute top-full right-0 bg-white text-gray-800 w-48 mt-2 rounded-md shadow-lg hidden transition-all duration-300">
+        <ul class="flex flex-col text-left">
+          <li>
+            <a class="hover:bg-green-600 hover:text-white px-4 py-2 transition-all duration-300"
+              href="./index.html">Home</a>
+          </li>
+          <li>
+            <a class="hover:bg-green-600 hover:text-white px-4 py-2 transition-all duration-300" href="./about.html">About</a>
+          </li>
+          <li>
+            <a class="hover:bg-green-600 hover:text-white px-4 py-2 transition-all duration-300" href="./community.html">Community</a>
+          </li>
+          <li>
+            <a class="hover:bg-green-600 hover:text-white px-4 py-2 transition-all duration-300" href="#">EVENTS<span class="text-yellow-400">&</span>NEWS</a>
+          </li>
+          <li>
+            <a class="hover:bg-green-600 hover:text-white px-4 py-2 transition-all duration-300"
+              href="./register.html">CONTACT<span class="text-yellow-400 font-800">/</span>REGISTER</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+    <main>
+        <section
+            class="relative h-screen max-w-full grid grid-cols-12 items-center object-top bg-cover bg-center overflow-hidden"
+            style="background-image: url('./images/freinds.jpeg');">
+            <!-- Gradient Overlay for Better Text Contrast -->
+            <div class="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/50"></div>
+
+            <!-- Text Content -->
+            <div
+                class="text-container col-span-12 z-10 text-white flex flex-col gap-4 pl-6 lg:pl-10 items-start text-center lg:text-left">
+
+                <h1 class="font-extrabold leading-tight flex flex-col items-start text-left space-y-2">
+                    <span
+                        class="text-[#dcbb26] lg:text-8xl md:text-6xl text-4xl block animate__animated animate__fadeIn animate__delay-2s ">
+                        Our Community
+                    </span>
+                    <span
+                        class="lg:text-8xl md:text-6xl text-4xl block animate__animated animate__fadeIn animate__delay-3s">
+                        Connect
+                    </span>
+                    <span
+                        class="text-green-500 lg:text-8xl md:text-6xl text-4xl block animate__animated animate__fadeIn animate__delay-4s">
+                        Collaborate
+                    </span>
+                </h1>
+                <p
+                    class="text-base lg:text-lg mt-2 text-white/80 animate__animated animate__fadeIn animate__delay-5s lg:w-[40%] md:w-[55%] w-[70%]">
+                    Join our vibrant community of tech enthusiasts, innovators, and learners. Share your knowledge,
+                    collaborate on projects, and make lasting connections that inspire personal and professional growth.
+                </p>
+                <button
+                    class="bg-[#006838] hover:bg-[#00562c] transition-all duration-300 text-white lg:px-6 py-3 mt-6 lg:text-lg text-sm font-medium uppercase rounded-md shadow-lg transform hover:scale-105 hover:animate-bounce">
+                    Get Involved
+                </button>
+            </div>
+
+            <!-- Parallax Background Effect -->
+            <div class="absolute inset-0 bg-[url('./images/4blripeq.png')] bg-fixed bg-cover bg-center opacity-60">
+            </div>
+
+            <!-- Scroll-to-Top Button -->
+            <a href="#top"
+                class="fixed bottom-20 border border-white right-2 z-50 bg-[#006838] hover:bg-[#00562c] transition-all duration-300 text-white px-4 py-2 rounded-full shadow-lg text-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 15l-7-7-7 7" />
+                </svg>
+            </a>
+        </section>
+
+        <!-- Rugby Community Section -->
+        <section id="community" class="bg-white py-12">
+            <div class="text-center mb-12">
+                <h2 class="call-to-action lg:text-6xl text-3xl font-bold text-gray-800">Our Rugby Community</h2>
+                <p class="text-yellow-600 mt-2 font-bold">Discover the heartbeat of our rugby community!</p>
+            </div>
+
+            <div class="container mx-auto grid lg:grid-cols-4 grid-cols-2 w-[90%] ">
+                <!-- Community Card 1 -->
+                <div
+                    class="border-2 rounded-md border-green-500 relative group flex flex-col items-center bg-white text-black shadow-lg hover:shadow-2xl transition duration-300 p-6">
+                    <div
+                        class="absolute inset-0 bg-gray-800 bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i class="fas fa-users text-white text-4xl"></i>
+                    </div>
+                    <span class="absolute -top-3 -right-3 border-8 border-yellow-500 rounded-full w-6 h-6"></span>
+                    <h3 class="text-2xl font-semibold mt-2">Support Group</h3>
+                    <p class="mt-2 text-center">Our support group fosters a sense of belonging and encouragement for all
+                        members.</p>
+                </div>
+
+                <!-- Community Card 2 -->
+                <div
+                    class="border-2 rounded-md border-green-500 relative group flex flex-col items-center bg-green-600 text-white shadow-lg hover:shadow-2xl transition duration-300 p-6">
+                    <div
+                        class="absolute inset-0 bg-gray-800 bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i class="fas fa-futbol text-white text-4xl"></i>
+                    </div>
+                    <span class="absolute -bottom-3 -left-3 border-8 border-green-500 rounded-full w-6 h-6"></span>
+                    <h3 class="text-2xl font-semibold mt-2">Training Sessions</h3>
+                    <p class="mt-2 text-center">Join our training sessions to improve your rugby skills in a supportive
+                        environment.</p>
+                </div>
+
+                <!-- Community Card 3 -->
+                <div
+                    class="border-2 rounded-md border-green-500 relative group flex flex-col items-center bg-white text-black shadow-lg hover:shadow-2xl transition duration-300 p-6">
+                    <div
+                        class="absolute inset-0 bg-gray-800 bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i class="fas fa-calendar-alt text-white text-4xl"></i>
+                    </div>
+                    <span class="absolute top-3 left-3 border-4 border-green-500 rounded-full w-6 h-6"></span>
+                    <h3 class="text-2xl font-semibold mt-2">Community Events</h3>
+                    <p class="mt-2 text-center">Participate in our events and share your passion for rugby with the
+                        community!</p>
+                </div>
+
+                <!-- Community Card 4 -->
+                <div
+                    class="border-2 rounded-md border-green-500 relative group flex flex-col items-center bg-green-600 text-white shadow-lg hover:shadow-2xl transition duration-300 p-6">
+                    <div
+                        class="absolute inset-0 bg-gray-800 bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i class="fas fa-hands-helping text-white text-4xl"></i>
+                    </div>
+                    <span class="absolute bottom-3 right-3 border-8 border-yellow-500 rounded-full w-6 h-6"></span>
+                    <h3 class="text-2xl font-semibold mt-2">Community Outreach</h3>
+                    <p class="mt-2 text-center">Engage with outreach programs to inspire the next generation of rugby
+                        players.</p>
+                </div>
+            </div>
+            <div class="container mx-auto grid lg:grid-cols-4 grid-cols-2 w-[90%]">
+                <!-- Community Card 5 -->
+                <div
+                    class="border-2 rounded-md border-green-500 relative group flex flex-col items-center bg-green-600 text-white shadow-lg hover:shadow-2xl transition duration-300 p-6">
+                    <div
+                        class="absolute inset-0 bg-gray-800 bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i class="fas fa-chalkboard-teacher text-white text-4xl"></i>
+                    </div>
+                    <span class="absolute -top-3 -left-3 border-4 border-yellow-500 rounded-full w-6 h-6"></span>
+                    <h3 class="text-2xl font-semibold mt-2">Workshops</h3>
+                    <p class="mt-2 text-center">Attend our expert-led workshops to learn advanced strategies and
+                        techniques.</p>
+                </div>
+
+                <!-- Community Card 6 -->
+                <div
+                    class="border-2 rounded-md border-green-500 relative group flex flex-col items-center bg-white text-black shadow-lg hover:shadow-2xl transition duration-300 p-6">
+                    <div
+                        class="absolute inset-0 bg-gray-800 bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i class="fas fa-trophy text-white text-4xl"></i>
+                    </div>
+                    <span class="absolute top-3 right-3 border-8 border-green-500 rounded-full w-6 h-6"></span>
+                    <h3 class="text-2xl font-semibold mt-2">Tournaments</h3>
+                    <p class="mt-2 text-center">Compete in tournaments and showcase your talent on the field.</p>
+                </div>
+
+                <!-- Community Card 7 -->
+                <div
+                    class="border-2 rounded-md border-green-500 relative group flex flex-col items-center bg-green-600 text-white shadow-lg hover:shadow-2xl transition duration-300 p-6">
+                    <div
+                        class="absolute inset-0 bg-gray-800 bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i class="fas fa-heartbeat text-white text-4xl"></i>
+                    </div>
+                    <span class="absolute -bottom-3 right-3 border-4 border-yellow-500 rounded-full w-6 h-6"></span>
+                    <h3 class="text-2xl font-semibold mt-2">Health & Fitness</h3>
+                    <p class="mt-2 text-center">Stay fit with our health and fitness programs tailored for rugby
+                        players.</p>
+                </div>
+
+                <!-- Community Card 8 -->
+                <div
+                    class="border-2 rounded-md border-green-500 relative group flex flex-col items-center bg-white text-black shadow-lg hover:shadow-2xl transition duration-300 p-6">
+                    <div
+                        class="absolute inset-0 bg-gray-800 bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i class="fas fa-globe text-white text-4xl"></i>
+                    </div>
+                    <span class="absolute bottom-3 left-3 border-4 border-green-500 rounded-full w-6 h-6"></span>
+                    <h3 class="text-2xl font-semibold mt-2">Global Connections</h3>
+                    <p class="mt-2 text-center">Connect with rugby enthusiasts from around the world and expand your
+                        network.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Team Section -->
+        <!-- Team Section -->
+        <section id="team" class="bg-white py-12">
+            <div class="text-center mb-12">
+                <h2 class="call-to-action lg:text-6xl text-3xl font-bold text-gray-800">Meet Our Team</h2>
+                <p class="text-yellow-600 mt-2 font-bold">Get to know the faces behind our success!</p>
+            </div>
+
+            <div class="container mx-auto grid lg:grid-cols-4 grid-cols-2 w-[90%] gap-1">
+                <!-- Team Card Template -->
+                <div
+                    class="col-span-1 relative group overflow-hidden rounded-md shadow-md hover:shadow-lg transition duration-300">
+                    <!-- Background Image -->
+                    <img src="./images/member1.jpg" alt="Team Member 1" class="object-cover w-full h-full">
+                    <!-- Spoken Words -->
+                    <p
+                        class="absolute inset-x-0 bottom-2 bg-yellow-600 bg-opacity-70 text-white text-center px-2 py-1 rounded-md shadow-sm transform group-hover:opacity-0 transition duration-300">
+                        "In rugby, the strength of the pack is the team, and the strength of the team is each player."
+                    </p>
+                    <!-- Overlay -->
+                    <div
+                        class="absolute inset-0 bg-green-500 bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4 transition duration-300 transform translate-y-full group-hover:translate-y-0">
+                        <h3 class="text-xl font-semibold">John Doe</h3>
+                        <p class="mt-1">Head Coach</p>
+                        <div class="flex mt-3 space-x-2">
+                            <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Repeat the structure for other team members -->
+                <div
+                    class="col-span-1 relative group overflow-hidden rounded-md shadow-md hover:shadow-lg transition duration-300">
+                    <img src="./images/member2.webp" alt="Team Member 2" class="object-cover w-full h-full">
+                    <p
+                        class="absolute inset-x-0 bottom-2 bg-yellow-600 bg-opacity-70 text-white text-center px-2 py-1 rounded-md shadow-sm transform group-hover:opacity-0 transition duration-300">
+                        "In rugby, it’s not about how hard you hit, but how hard you can get hit, keep moving forward,
+                        and still get back up."
+                    </p>
+                    <div
+                        class="absolute inset-0 bg-green-500 bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4 transition duration-300 transform translate-y-full group-hover:translate-y-0">
+                        <h3 class="text-xl font-semibold">Jane Smith</h3>
+                        <p class="mt-1">Assistant Coach</p>
+                        <div class="flex mt-3 space-x-2">
+                            <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the structure for other team members -->
+                <div
+                    class="col-span-1 relative group overflow-hidden rounded-md shadow-md hover:shadow-lg transition duration-300">
+                    <img src="./images/member3.png" alt="Team Member 2" class="object-cover w-full h-full">
+                    <p
+                        class="absolute inset-x-0 bottom-2 bg-yellow-600 bg-opacity-70 text-white text-center px-2 py-1 rounded-md shadow-sm transform group-hover:opacity-0 transition duration-300">
+                        "Rugby teaches you that success is not built on individual talent but on the collective strength
+                        of a team."
+                    </p>
+                    <div
+                        class="absolute inset-0 bg-green-500 bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4 transition duration-300 transform translate-y-full group-hover:translate-y-0">
+                        <h3 class="text-xl font-semibold">Jane Smith</h3>
+                        <p class="mt-1">Assistant Coach</p>
+                        <div class="flex mt-3 space-x-2">
+                            <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the structure for other team members -->
+                <div
+                    class="col-span-1 relative group overflow-hidden rounded-md shadow-md hover:shadow-lg transition duration-300">
+                    <img src="./images/member4.jpg" alt="Team Member 2" class="object-cover w-full h-full">
+                    <p
+                        class="absolute inset-x-0 bottom-2 bg-yellow-600 bg-opacity-70 text-white text-center px-2 py-1 rounded-md shadow-sm transform group-hover:opacity-0 transition duration-300">
+                        "Rugby is not just a game; it’s a way of life that teaches you the importance of teamwork,
+                        discipline, and respect."
+                    </p>
+                    <div
+                        class="absolute inset-0 bg-green-500 bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4 transition duration-300 transform translate-y-full group-hover:translate-y-0">
+                        <h3 class="text-xl font-semibold">Jane Smith</h3>
+                        <p class="mt-1">Assistant Coach</p>
+                        <div class="flex mt-3 space-x-2">
+                            <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the structure for other team members -->
+                <div
+                    class="col-span-1 relative group overflow-hidden rounded-md shadow-md hover:shadow-lg transition duration-300">
+                    <img src="./images/member5.webp" alt="Team Member 2" class="object-cover w-full h-full">
+                    <p
+                        class="absolute inset-x-0 bottom-2 bg-yellow-600 bg-opacity-70 text-white text-center px-2 py-1 rounded-md shadow-sm transform group-hover:opacity-0 transition duration-300">
+                        "Rugby isn’t just played on the pitch; it’s lived in every practice, every loss, and every
+                        hard-fought win."
+                    </p>
+                    <div
+                        class="absolute inset-0 bg-green-500 bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4 transition duration-300 transform translate-y-full group-hover:translate-y-0">
+                        <h3 class="text-xl font-semibold">Jane Smith</h3>
+                        <p class="mt-1">Assistant Coach</p>
+                        <div class="flex mt-3 space-x-2">
+                            <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the structure for other team members -->
+                <div
+                    class="col-span-1 relative group overflow-hidden rounded-md shadow-md hover:shadow-lg transition duration-300">
+                    <img src="./images/member6.jpg" alt="Team Member 2" class="object-cover w-full h-full">
+                    <p
+                        class="absolute inset-x-0 bottom-2 bg-yellow-600 bg-opacity-70 text-white text-center px-2 py-1 rounded-md shadow-sm transform group-hover:opacity-0 transition duration-300">
+                        "On the rugby field, you learn quickly that you cannot win alone; every victory is a team effort
+                        built on trust and selflessness."
+                    </p>
+                    <div
+                        class="absolute inset-0 bg-green-500 bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4 transition duration-300 transform translate-y-full group-hover:translate-y-0">
+                        <h3 class="text-xl font-semibold">Jane Smith</h3>
+                        <p class="mt-1">Assistant Coach</p>
+                        <div class="flex mt-3 space-x-2">
+                            <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the structure for other team members -->
+                <div
+                    class="col-span-1 relative group overflow-hidden rounded-md shadow-md hover:shadow-lg transition duration-300">
+                    <img src="./images/member7.jpeg" alt="Team Member 2" class="object-cover w-full h-full">
+                    <p
+                        class="absolute inset-x-0 bottom-2 bg-yellow-600 bg-opacity-70 text-white text-center px-2 py-1 rounded-md shadow-sm transform group-hover:opacity-0 transition duration-300">
+                        "Rugby is a battlefield where the strongest don’t always prevail, but those with the biggest
+                        hearts do."
+                    </p>
+                    <div
+                        class="absolute inset-0 bg-green-500 bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4 transition duration-300 transform translate-y-full group-hover:translate-y-0">
+                        <h3 class="text-xl font-semibold">Jane Smith</h3>
+                        <p class="mt-1">Assistant Coach</p>
+                        <div class="flex mt-3 space-x-2">
+                            <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the structure for other team members -->
+                <div
+                    class="col-span-1 relative group overflow-hidden rounded-md shadow-md hover:shadow-lg transition duration-300">
+                    <img src="./images/member8.png" alt="Team Member 2" class="object-cover w-full h-full">
+                    <p
+                        class="absolute inset-x-0 bottom-2 bg-yellow-600 bg-opacity-70 text-white text-center px-2 py-1 rounded-md shadow-sm transform group-hover:opacity-0 transition duration-300">
+                        "Playing rugby is a lesson in resilience; it’s about facing adversity with determination,
+                        finding the will to fight back."
+                    </p>
+                    <div
+                        class="absolute inset-0 bg-green-500 bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4 transition duration-300 transform translate-y-full group-hover:translate-y-0">
+                        <h3 class="text-xl font-semibold">Jane Smith</h3>
+                        <p class="mt-1">Assistant Coach</p>
+                        <div class="flex mt-3 space-x-2">
+                            <a href="#" class="hover:text-yellow-400"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue adding team members in similar fashion -->
+            </div>
+        </section>
+        <!-- ...............................Time with community......................... -->
+
+        <section class="flex flex-col justify-center items-center py-5">
+            
+
+            <div class="border-l-8 border-[#00743F] my-10">
+                <h1 class="text-[78px] px-2 font-bold text-black">Time with<span class="text-yellow-600"> Our Community</span>
+                </h1>
+            </div>
+            <div class="second-section flex flex-col md:flex-row w-[95%] sm:w-[85%] md:w-[80%] mx-auto justify-center items-center">
+                <div class="flex order-2 lg:order-1 md:order-1 flex-col gap-4 w-full md:w-1/2 text-center md:text-left">
+                    <div class="w-[50px] h-[50px] bg-[#00743F] rounded-full flex justify-center items-center mx-auto md:mx-0">
+                        <i class="fas fa-user-tie text-black text-3xl"></i>
+                    </div>
+                    <h2 class="text-[#00743F] font-bold text-xl md:text-2xl">Leaders of the Game:</h2>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-black">Experience, Leadership, and Legacy</h2>
+                    <p class="text-black font-bold lg:text-base text-start lg:text-lg md:text-md text-sm w-full mx-auto md:mx-0 p-4">
+                        The 1000 Hills Rugby Team is proud of its seasoned players who bring years of experience, leadership, and wisdom to the field. Our adult team members are more than just athletes; they are mentors, role models, and key figures in our community. Their dedication to the game and commitment to fostering a positive environment have made a lasting impact on both the team and our fans. Watch their stories and see how they continue to inspire the next generation of players.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 order-1 lg:order-2 md:order-2 relative">
+                    <img class="object-cover w-full h-auto" src="./images/program-img-2.jpg" alt="Adult and Mature Team Highlights">
+                    <a href="./videos/girls_highlights.mp4" class="absolute inset-0 flex justify-center items-center">
+                        <div
+                            class="absolute inset-0 bg-green-700 opacity-75 transition-opacity duration-300 hover:opacity-0">
+                        </div>
+                        <button class="bg-yellow-600 h-12 w-12  rounded-full z-10">▶</button>
+                    </a>
+                </div>
+            </div>
+            
+
+            <div
+                class="second-section flex flex-col md:flex-row w-[95%] sm:w-[85%] md:w-[80%] mx-auto justify-center items-center">
+                <div class="flex order-1 lg:order-2 md:order-2 flex-col gap-4 w-full md:w-1/2 text-center md:text-left p-4">
+                    <div
+                        class="w-[50px] h-[50px] bg-[#00743F] rounded-full flex justify-center items-center mx-auto md:mx-0">
+                        <i class="fas fa-female text-black text-3xl"></i>
+                    </div>
+                    <h2 class="text-[#00743F] font-bold text-xl md:text-2xl">Empowering Girls in Rugby:</h2>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-black">Strength, Courage, and Community!</h2>
+                    <p
+                        class="text-black font-bold lg:text-base text-start lg:text-lg md:text-md text-sm w-full mx-auto md:mx-0 px-1">
+                        At the 1000 Hills Rugby Team, we celebrate the empowerment of girls through sport. Our girls'
+                        program not only focuses on athletic development but also promotes confidence, teamwork, and
+                        community involvement. We aim to inspire young women to break barriers and become leaders on and
+                        off the field. Join us in supporting our female athletes as they showcase their strength and
+                        determination.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/2 order-2 lg:order-1 md:order-1 relative">
+                    <img class="object-cover w-full h-auto" src="./images/kids.jpeg" alt="Girls Rugby Highlights">
+                    <a href="./videos/girls_highlights.mp4" class="absolute inset-0 flex justify-center items-center">
+                        <div
+                            class="absolute inset-0 bg-green-700 opacity-75 transition-opacity duration-300 hover:opacity-0">
+                        </div>
+                        <button class="bg-yellow-600 h-12 w-12  rounded-full z-10">▶</button>
+                    </a>
+                </div>
+            </div>
+
+
+            <div
+                class="second-section flex flex-col md:flex-row w-[95%] sm:w-[85%] md:w-[80%] mx-auto justify-center items-center gap-0">
+                <div class="flex order-2 lg:order-1 md:order-1 flex-col gap-4 w-full md:w-1/2 text-center md:text-left p-4">
+                    <div
+                        class="w-[50px] h-[50px] bg-[#00743F] rounded-full flex justify-center items-center mx-auto md:mx-0">
+                        <i class="fas fa-users text-black text-3xl"></i>
+                    </div>
+                    <h2 class="text-[#00743F] font-bold text-xl md:text-2xl">Empowering Our Youth:</h2>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-black">Building Future Leaders through Rugby!
+                    </h2>
+                    <p id="youth-section"
+                        class="text-black font-bold lg:text-base text-start lg:text-lg md:text-md text-sm w-full mx-auto md:mx-0 px-1">
+                        The 1000 Hills Rugby Team is dedicated to empowering our youth through the sport of rugby. We
+                        believe in fostering leadership, teamwork, and resilience in our young athletes. Each training
+                        session and match helps build character, instilling values that last a lifetime. Join us in
+                        nurturing the next generation of leaders who will carry the spirit of our community forward.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 order-1 lg:order-2 md:order-2 relative">
+                    <img class="object-cover w-full h-auto" src="./images/kids-events.jpg" alt="Youth Rugby Highlights">
+                    <a href="./videos/youth_highlights.mp4" class="absolute inset-0 flex justify-center items-center">
+                        <div
+                            class="absolute inset-0 bg-green-700 opacity-75 transition-opacity duration-300 hover:opacity-0">
+                        </div>
+                        <button class="bg-yellow-600 h-12 w-12  rounded-full z-10">▶</button>
+                    </a>
+                </div>
+            </div>
+
+            
+
+        </section>
+        <section class="py-20 relative overflow-hidden ">
+            <!-- Enhanced Background with Particles and Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-br from-[bg-yellow-100] to-[#6d6e71] opacity-95"></div>
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20 mix-blend-overlay"></div> <!-- Adding a subtle cube pattern texture -->
+        
+            <!-- Particle Effect for Extra Visual Appeal -->
+            <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
+                <div class="h-[300px] w-[300px] bg-gradient-to-r from-[green] via-transparent to-[yellow] opacity-50 rounded-full blur-2xl animate-float"></div>
+            </div>
+        
+            <div class="w-11/12 max-w-4xl mx-auto text-center text-black relative z-10">
+                <h2 class=" text-6xl font-extrabold mb-6 tracking-wider drop-shadow-lg">
+                    Register Now
+                </h2>
+                <p class=" text-lg mb-10 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+                    Don’t miss out on this incredible opportunity! This is your chance to gain invaluable skills, connect with industry experts, and collaborate with like-minded individuals. Secure your spot today and be part of something special! Join us for a transformative experience that will not only enhance your abilities but also inspire you to reach new heights. 
+                </p>
+                <button class="bg-white text-black px-10 py-4 rounded-full text-xl font-semibold shadow-lg transition duration-300 transform hover:bg-yellow-600 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-white hover:shadow-2xl">
+                    Register
+                </button>
+            </div>
+        </section>
+
+
+
+
+
+
+
+    </main>
+
+    <footer
+        class="lg:w-full px-8 py-16 flex lg:flex-row flex-col text-white bg-gradient-to-b from-black to-gray-900 lg:h-[60vh]">
+        <!-- Logo Section -->
+        <div
+            class="footer-logo lg:w-2/12 w-full flex items-center justify-center lg:justify-start lg:mx-8 mb-8 lg:mb-0">
+            <img class="lg:w-[150px] h-[150px] w-[120px] lg:h-[120px] object-contain transition-transform duration-300 hover:scale-105"
+                src="./images/1000-hills-logo.png" alt="Logo" />
+        </div>
+
+        <!-- Team Info Section -->
+        <div class="lg:w-3/12 w-full flex flex-col lg:mx-4 footer-info mb-8 lg:mb-0">
+            <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">Team</p>
+            <ul class="mt-6 text-[#a5a6a8] text-sm font-light flex flex-col gap-3">
+                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="#">Pro Placement Program</a>
+                </li>
+                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="#">Academy Development</a></li>
+                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="#">Specialist Program</a></li>
+                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="#">Junior Summer Program</a>
+                </li>
+                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="#">Coaching Staff</a></li>
+            </ul>
+        </div>
+
+        <!-- Club Info Section -->
+        <div class="lg:w-3/12 w-full flex flex-col mb-8 lg:mb-0">
+            <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">Club</p>
+            <ul class="mt-6 text-[#a5a6a8] text-sm font-light flex flex-col gap-3">
+                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="./about.html">About Us</a></li>
+                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="#">History</a></li>
+                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="./services.html">Services</a>
+                </li>
+                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="#">News & Media</a></li>
+                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="lg:w-4/12 w-full flex flex-col">
+            <div class="mb-8">
+                <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">Contact</p>
+                <ul class="mt-6 text-[#a5a6a8] text-sm font-light flex flex-col gap-3">
+                    <li class="flex items-center hover:text-[#dcbb26] transition-colors duration-300">
+                        <i class="text-[#006838] mr-2 fa-solid fa-phone"></i>1-800-1-900
+                    </li>
+                    <li class="flex items-center hover:text-[#dcbb26] transition-colors duration-300">
+                        <i class="text-[#006838] mr-2 fa-solid fa-envelope"></i>info@campo.com
+                    </li>
+                    <li class="flex items-center hover:text-[#dcbb26] transition-colors duration-300">
+                        <i class="text-[#006838] mr-2 fa-solid fa-location-dot"></i>60 East 65th Street, Minneapolis
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Social Media Section -->
+            <div>
+                <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">Connect</p>
+                <ul class="mt-4 flex gap-6 text-2xl">
+                    <li class="hover:text-[#1877F2] transition-colors duration-300">
+                        <a href="https://www.facebook.com/1000hillsrugby/" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="hover:text-[#E4405F] transition-colors duration-300">
+                        <a href="https://www.instagram.com/1000hillsrugby/" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="hover:text-[#1DA1F2] transition-colors duration-300">
+                        <a href="https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08" aria-label="Twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="hover:text-[#FF0000] transition-colors duration-300">
+                        <a href="https://www.youtube.com/@1000HillsRugby" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
