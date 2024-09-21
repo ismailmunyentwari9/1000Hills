@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL NEWS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<style>
+    /* Display the menu when the checkbox is checked */
+    #menu-toggle:checked ~ #menu {
+        display: block;
+    }
+    
+    /* Hide the menu if not checked */
+    #menu:hover {
+        display: block;
+    }
+</style>
+<body>
+    <nav class="navbar top-0 left-0 w-[100%] z-10 h-[10vh] flex justify-between items-center py-1 px-2 text-[#fff] fixed">
+        <div class="navbar-logo w-2/12 ">
+            <a href="./index.html"><img class="w-[60px] hover:w-[70px] mt-6 ml-6" src="./images/1000-hills-logo.png" alt="Logo"></a>
+            <!-- Replace with your logo -->
+        </div>
+        <ul class="flex lg:space-x-4 font-thin w-8/12 uppercase gap-2 text-sm ">
+            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./index.html">Home</a></li>
+            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">About</a></li>
+            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Community</a></li>
+            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Results</a></li>
+            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./news.html">News</a></li>
+            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./events.html">Events</a></li>
+        </ul>
+        <div class="flex w-2/12 list-1">
+            <ul class="flex lg:gap-6 gap-2 justify-center items-center text-md ">
+                <li class="list-2">
+                    <a class="hover:text-[#006838] hover:text-lg" href="https://www.facebook.com/1000hillsrugby/">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="list-2">
+                    <a class="hover:text-[#006838] hover:text-lg" href="https://www.instagram.com/1000hillsrugby/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="list-2">
+                    <a class="hover:text-[#006838] hover:text-lg"
+                        href=" https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08 ">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-2">
+                    <a class="hover:text-[#006838] hover:text-lg" href="https://www.youtube.com/@1000HillsRugby">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="relative icon-1 lg:hidden">
+            <!-- Hidden Checkbox for Toggle -->
+            <input type="checkbox" id="menu-toggle" class="hidden">
+
+            <!-- Label as Menu Icon -->
+            <label for="menu-toggle" class="cursor-pointer text-2xl">
+                <i class="icon-1 lg:hidden text-black text-xl pr-3 fa-solid fa-bars"></i>
+            </label>
+
+            <!-- Hidden Menu -->
+            <div id="menu"
+                class="absolute top-full left-1/2 transform -translate-x-1/2 bg-white shadow-lg mt-2 w-48 hidden">
+                <ul class="flex flex-col text-left">
+                    <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./index.html">Home</a></li>
+            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">About</a></li>
+            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Community</a></li>
+            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Results</a></li>
+            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./news.html">News</a></li>
+            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./events.html">Events</a></li>
+            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <main>
+        <section class="news-home-page bg-cover h-[120vh]  max-w-full grid grid-cols-12 items-center">
+            <div class="text-container border-l-[10px] flex flex-col gap-2 col-span-9 border-white-500 pl-4 text-white">
+                <p class="text-[20px] font-thin">OUR BLOG</p>
+                <h1 class="lg:text-[80px] text-7xl font-semibold">NEW <br> STUFF IN <br> <span class="text-[#1b75bc]">CAMPO <br> WORLD</span>
+                </h1>
+            </div>
+        </section>
+        <section class="w-10/12 flex flex-col mx-auto gap-6 mt-28">
+            <div class="flex gap-2">
+                <i class="text-[#1b75bc] text-2xl fa-regular fa-bookmark"></i>
+                <p class="lg:text-lg md:text-lg sm:text-lg text-md flex items-center">RUGBY, NEWS</p>
+            </div>
+            <div>
+                <p class="lg:w-11/12 lg:text-5xl md:text-5xl sm:text-5xl text-3xl font-bold hover:text-[#1b75bc] uppercase">Alonso already looking ahead after ‘goal feast’</p>
+            </div>
+            <div class="flex gap-2">
+                <i class=" text-[#1b75bc] text-2xl fa-regular fa-clock"></i>
+                <p class="lg:text-lg md:text-lg sm:text-lg text-md flex items-center">1 MARCH 2023</p>
+            </div>
+            <div>
+                <img class="" src="./images/news-2.jpg" alt="">
+            </div>
+            <div class="w-10/12">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, eius cumque necessitatibus modi sunt praesentium aperiam ducimus ipsa voluptates labore earum iure quas optio nulla eveniet quibusdam, nam dolorem vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eos adipisci asperiores maxime. Non voluptatem omnis cumque incidunt suscipit illum necessitatibus, laborum est. Officia tempora placeat sunt ipsum ab est.</p>
+            </div>
+            <div class="flex gap-3">
+                <p class="text-sm font-bold flex items-center">CHECK:</p>
+                <ul class="flex gap-3 justify-center items-center text-xl text-[#1b75bc] ">
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.facebook.com/1000hillsrugby/">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.instagram.com/1000hillsrugby/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl"
+                            href=" https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08 ">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.youtube.com/@1000HillsRugby">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="w-10/12 flex flex-col mx-auto gap-6 mt-28">
+            <div class="flex gap-2">
+                <i class="text-[#1b75bc] text-2xl fa-regular fa-bookmark"></i>
+                <p class="lg:text-lg md:text-lg sm:text-lg text-md flex items-center">RUGBY, REPORT</p>
+            </div>
+            <div>
+                <p class="w-8/12 lg:text-5xl md:text-5xl sm:text-5xl text-3xl font-bold hover:text-[#1b75bc] uppercase">Horstweg can be a double gameweek hero</p>
+            </div>
+            <div class="flex gap-2">
+                <i class=" text-[#1b75bc] text-2xl fa-regular fa-clock"></i>
+                <p class="lg:text-lg md:text-lg sm:text-lg text-md flex items-center uppercase">22 September 2023</p>
+            </div>
+            <div>
+                <video controls class="h-[480px] w-[950px]">
+                    <source src="https://www.youtube.com/watch?v=yTiyuVrVrv4">
+                </video>
+            </div>
+            <div class="w-10/12">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, eius cumque necessitatibus modi sunt praesentium aperiam ducimus ipsa voluptates labore earum iure quas optio nulla eveniet quibusdam, nam dolorem vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eos adipisci asperiores maxime. Non voluptatem omnis cumque incidunt suscipit illum necessitatibus, laborum est. Officia tempora placeat sunt ipsum ab est.</p>
+            </div>
+            <div class="flex gap-3">
+                <p class="text-sm font-bold flex items-center">CHECK:</p>
+                <ul class="flex gap-3 justify-center items-center text-xl text-[#1b75bc] ">
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.facebook.com/1000hillsrugby/">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.instagram.com/1000hillsrugby/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl"
+                            href=" https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08 ">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.youtube.com/@1000HillsRugby">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="w-10/12 flex flex-col mx-auto gap-6 mt-28">
+            <div class="flex gap-2">
+                <i class="text-[#1b75bc] text-2xl fa-regular fa-bookmark"></i>
+                <p class="lg:text-lg md:text-lg sm:text-lg text-md flex items-center">RUGBY, TEAM</p>
+            </div>
+            <div>
+                <p class="lg:text-5xl md:text-5xl sm:text-5xl text-3xl font-bold hover:text-[#1b75bc] uppercase">Pre-Match Briefing: Hammers vs Eagles</p>
+            </div>
+            <div class="flex gap-2">
+                <i class=" text-[#1b75bc] text-2xl fa-regular fa-clock"></i>
+                <p class="lg:text-lg md:text-lg sm:text-lg text-md flex items-center">28 OCTOBER 2023</p>
+            </div>
+            <div>
+                <img class="" src="./images/news-bg.webp" alt="">
+            </div>
+            <div class="w-10/12">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, eius cumque necessitatibus modi sunt praesentium aperiam ducimus ipsa voluptates labore earum iure quas optio nulla eveniet quibusdam, nam dolorem vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eos adipisci asperiores maxime. Non voluptatem omnis cumque incidunt suscipit illum necessitatibus, laborum est. Officia tempora placeat sunt ipsum ab est.</p>
+            </div>
+            <div class="flex gap-3">
+                <p class="text-sm font-bold flex items-center">CHECK:</p>
+                <ul class="flex gap-3 justify-center items-center text-xl text-[#1b75bc] ">
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.facebook.com/1000hillsrugby/">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.instagram.com/1000hillsrugby/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl"
+                            href=" https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08 ">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.youtube.com/@1000HillsRugby">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="w-10/12 flex flex-col mx-auto gap-6 mt-28">
+            <div class="flex gap-2">
+                <i class="text-[#1b75bc] text-2xl fa-regular fa-bookmark"></i>
+                <p class="lg:text-lg md:text-lg sm:text-lg text-md flex items-center">RUGBY, REPORT</p>
+            </div>
+            <div>
+                <p class="lg:text-5xl md:text-5xl sm:text-5xl text-3xl font-bold hover:text-[#1b75bc] uppercase">Video Highlights: EAGLES 24-21 RHINOS</p>
+            </div>
+            <div class="flex gap-2">
+                <i class=" text-[#1b75bc] text-2xl fa-regular fa-clock"></i>
+                <p class="lg:text-lg md:text-lg sm:text-lg text-md flex items-center uppercase">3 November 2023</p>
+            </div>
+            <div>
+                <video controls class="h-[480px] w-[950px]">
+                    <source src="https://www.youtube.com/watch?v=yTiyuVrVrv4">
+                </video>
+            </div>
+            <div class="w-10/12">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, eius cumque necessitatibus modi sunt praesentium aperiam ducimus ipsa voluptates labore earum iure quas optio nulla eveniet quibusdam, nam dolorem vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eos adipisci asperiores maxime. Non voluptatem omnis cumque incidunt suscipit illum necessitatibus, laborum est. Officia tempora placeat sunt ipsum ab est.</p>
+            </div>
+            <div class="flex gap-3">
+                <p class="text-sm font-bold flex items-center">CHECK:</p>
+                <ul class="flex gap-3 justify-center items-center text-xl text-[#1b75bc] ">
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.facebook.com/1000hillsrugby/">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.instagram.com/1000hillsrugby/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl"
+                            href=" https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08 ">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.youtube.com/@1000HillsRugby">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="w-10/12 flex flex-col mx-auto gap-6 mb-28 mt-28">
+            <div class="flex gap-2">
+                <i class="text-[#1b75bc] text-2xl fa-regular fa-bookmark"></i>
+                <p class="lg:text-lg md:text-lg sm:text-lg text-md flex items-center">RUGBY, SPORT</p>
+            </div>
+            <div>
+                <p class="w-10/12 lg:text-5xl md:text-5xl sm:text-5xl text-3xl font-bold hover:text-[#1b75bc] uppercase">Watch the highlights and goals against Seagulls</p>
+            </div>
+            <div class="flex gap-2">
+                <i class=" text-[#1b75bc] text-2xl fa-regular fa-clock"></i>
+                <p class="lg:text-lg md:text-lg sm:text-lg text-md flex items-center">25 November 2023</p>
+            </div>
+            <div>
+                <img src="./images/rugby-3.jpeg" alt="">
+            </div>
+            <div class="w-10/12">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, eius cumque necessitatibus modi sunt praesentium aperiam ducimus ipsa voluptates labore earum iure quas optio nulla eveniet quibusdam, nam dolorem vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio eos adipisci asperiores maxime. Non voluptatem omnis cumque incidunt suscipit illum necessitatibus, laborum est. Officia tempora placeat sunt ipsum ab est.</p>
+            </div>
+            <div class="flex gap-3">
+                <p class="text-sm font-bold flex items-center">CHECK:</p>
+                <ul class="flex gap-3 justify-center items-center text-xl text-[#1b75bc] ">
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.facebook.com/1000hillsrugby/">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.instagram.com/1000hillsrugby/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl"
+                            href=" https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08 ">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="hover:text-2xl" href="https://www.youtube.com/@1000HillsRugby">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="lg:w-full px-4 flex lg:flex-row flex-col text-white bg-black lg:h-[60vh]">
+        <div class="footer-logo lg:w-2/12 lg:mx-8 lg:-mt-2 w-full flex pt-20 max-lg:pt-14">
+            <img class="lg:w-[150px] h-[100px]  w-[150px] h-[150px]" src="./images/1000-hills-logo.png" alt="Logo">
+        </div>
+        <div class="lg:w-3/12 w-full flex flex-col lg:mx-4 footer-info pt-20 max-lg:pt-8">
+            <p class="text-lg font-bold">TEAM</p>
+            <ul class="mt-9 text-[#6d6e71] w-10/12 text-sm font-thin flex flex-col gap-1  ">
+                <li class="hover:text-white"><a href="#">ROSTER</a></li>
+                <li class="hover:text-white"><a href="#">ACADEMY</a></li>
+                <li class="hover:text-white"><a href="#">COACHING STUFF</a></li>
+                <li class="hover:text-white"><a href="#">SCHEDULE</a></li>
+                <li class="hover:text-white"><a href="#">GALLERY</a></li>
+            </ul>
+        </div>
+        <div class="lg:w-3/12 w-full flex flex-col footer-info pt-20 max-lg:pt-8">
+            <p class="flex text-lg font-bold">CLUB</p>
+            <ul class="flex text-[#6d6e71] flex-col mt-9 gap-1 text-sm font-thin">
+                <li class="hover:text-white"><a href="#">ABOUT US</a></li>
+                <li class="hover:text-white"><a href="#">HISTORY</a></li>
+                <li class="hover:text-white"><a href="./services.html">SERVICES</a></li>
+                <li class="hover:text-white"><a href="#">NEWS & MEDIA</a></li>
+                <li class="hover:text-white"><a href="./contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="flex flex-col lg:w-4/12 w-full">
+            <div class="flex flex-col footer-info pt-20 max-lg:pt-8">
+                <p class="flex text-lg font-bold">CONTACT</p>
+                <ul class="flex text-[#6d6e71] flex-col mt-9 gap-1 text-sm font-thin">
+                    <li><a href="#"><i class="text-[#006838] mr-2 fa-solid fa-phone"></i>1-800-1-900</a></li>
+                    <li><a href="#"><i class="text-[#006838] mr-2 fa-solid fa-envelope"></i>info@campo.com</a></li>
+                    <li><a href="#"><i class="text-[#006838] mr-2 fa-solid fa-location-dot"></i>60 East 65th Street,
+                            Minneapolis</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col mt-9 footer-info max-lg:pb-14">
+                <p class="flex text-lg font-bold">CONNECT</p>
+                <ul class="flex gap-3 mt-4 text-lg font-thin">
+                    <li><a href="https://www.facebook.com/1000hillsrugby/"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/1000hillsrugby/"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li><a href=" https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08 "><i
+                                class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/@1000HillsRugby"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
