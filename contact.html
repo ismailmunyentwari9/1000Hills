@@ -25,70 +25,164 @@
 
 <body>
     <!-- Transparent Navbar -->
-    <nav class="navbar top-0 left-0 w-[100%] z-10 h-[10vh] flex justify-between items-center py-1 px-2 text-[#fff] fixed">
-        <div class="navbar-logo w-2/12 ">
-            <a href="./index.html"><img class="w-[60px] hover:w-[70px] mt-6 ml-6" src="./images/1000-hills-logo.png" alt="Logo"></a>
-            <!-- Replace with your logo -->
-        </div>
-        <ul class="flex lg:space-x-4 font-thin w-8/12 uppercase gap-2 text-sm ">
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./index.html">Home</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">About</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Community</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Results</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./news.html">News</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./events.html">Events</a></li>
+    <nav
+    class="navbar fixed top-0 left-0 w-full px-2 z-20 h-[10vh] flex flex-wrap justify-between items-center py-2 bg-white/90 backdrop-blur-lg shadow-lg transition-all duration-300"
+  >
+    <!-- Logo -->
+    <div class="navbar-logo w-2/12">
+      <a href="./index.html">
+        <img
+          class="w-[60px] hover:w-[70px] transition-transform duration-300"
+          src="./images/1000-hills-logo.png"
+          alt="Logo"
+        />
+      </a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <ul
+      class="hidden lg:flex lg:space-x-8 font-600 text-gray-800 uppercase text-sm tracking-wider"
+    >
+      <li>
+        <a
+          class="hover:text-green-600 hover:border-b-2 hover:border-green-600 transition-all duration-300"
+          href="./index.html"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          class="hover:text-green-600 hover:border-b-2 hover:border-green-600 transition-all duration-300"
+          href="./about.html"
+          >About</a
+        >
+      </li>
+      <li>
+        <a
+          class="hover:text-green-600 hover:border-b-2 hover:border-green-600 transition-all duration-300"
+          href="./community.html"
+          >Community</a
+        >
+      </li>
+
+      <li>
+        <a
+          class="hover:text-green-600 hover:border-b-2 hover:border-green-600 transition-all duration-300"
+          href="./events.html"
+          >Events<span class="text-yellow-400">&</span>News</a
+        >
+      </li>
+      <li>
+        <a
+          class="hover:text-green-600 hover:border-b-2 hover:border-green-600 transition-all duration-300"
+          href="./register.html"
+          >Contact<span class="text-yellow-400 font-800">/</span>Register</a
+        >
+      </li>
+    </ul>
+
+    <!-- Social Media Links for Desktop -->
+    <div class="hidden lg:flex w-2/12 justify-center space-x-6 text-xl">
+      <a
+        class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+        href="https://www.facebook.com/1000hillsrugby/"
+        ><i class="fa-brands fa-facebook-f"></i
+      ></a>
+      <a
+        class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+        href="https://www.instagram.com/1000hillsrugby/"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+      <a
+        class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+        href="https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08"
+        ><i class="fa-brands fa-x-twitter"></i
+      ></a>
+      <a
+        class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+        href="https://www.youtube.com/@1000HillsRugby"
+        ><i class="fa-brands fa-youtube"></i
+      ></a>
+    </div>
+
+    <!-- Mobile Menu & Social Media -->
+    <div class="relative lg:hidden flex flex-wrap items-center">
+      <!-- Social Media for Mobile -->
+      <div class="flex space-x-4 mr-4">
+        <a
+          class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+          href="https://www.facebook.com/1000hillsrugby/"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a
+          class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+          href="https://www.instagram.com/1000hillsrugby/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+          href="https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a
+          class="hover:text-green-600 hover:scale-110 transition-all duration-300"
+          href="https://www.youtube.com/@1000HillsRugby"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <input type="checkbox" id="menu-toggle" class="hidden" />
+      <label for="menu-toggle" class="cursor-pointer text-2xl text-black">
+        <i class="fa-solid fa-bars" id="menu-open-icon"></i>
+        <i class="fa-solid fa-times hidden" id="menu-close-icon"></i>
+      </label>
+
+      <div
+        id="menu"
+        class="absolute top-full right-0 bg-white text-gray-800 w-48 mt-2 rounded-md shadow-lg hidden transition-all duration-300"
+      >
+        <ul class="flex flex-col text-left">
+          <li>
+            <a
+              class="hover:bg-green-600 hover:text-white px-4 py-2 transition-all duration-300"
+              href="./index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:bg-green-600 hover:text-white px-4 py-2 transition-all duration-300"
+              href="./about.html"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:bg-green-600 hover:text-white px-4 py-2 transition-all duration-300"
+              href="./community.html"
+              >Community</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:bg-green-600 hover:text-white px-4 py-2 transition-all duration-300"
+              href="./events.html"
+              >EVENTS<span class="text-yellow-400">&</span>NEWS</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:bg-green-600 hover:text-white px-4 py-2 transition-all duration-300"
+              href="./register.html"
+              >CONTACT<span class="text-yellow-400 font-800">/</span
+              >REGISTER</a
+            >
+          </li>
         </ul>
-        <div class="flex w-2/12 list-1">
-            <ul class="flex lg:gap-6 gap-2 justify-center items-center text-md ">
-                <li class="list-2">
-                    <a class="hover:text-[#006838] hover:text-lg" href="https://www.facebook.com/1000hillsrugby/">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li class="list-2">
-                    <a class="hover:text-[#006838] hover:text-lg" href="https://www.instagram.com/1000hillsrugby/">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-                <li class="list-2">
-                    <a class="hover:text-[#006838] hover:text-lg"
-                        href=" https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08 ">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                </li>
-                <li class="list-2">
-                    <a class="hover:text-[#006838] hover:text-lg" href="https://www.youtube.com/@1000HillsRugby">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="relative icon-1 lg:hidden">
-            <!-- Hidden Checkbox for Toggle -->
-            <input type="checkbox" id="menu-toggle" class="hidden">
-
-            <!-- Label as Menu Icon -->
-            <label for="menu-toggle" class="cursor-pointer text-2xl">
-                <i class="icon-1 lg:hidden text-black text-xl pr-3 fa-solid fa-bars"></i>
-            </label>
-
-            <!-- Hidden Menu -->
-            <div id="menu"
-                class="absolute top-full left-1/2 transform -translate-x-1/2 bg-white shadow-lg mt-2 w-48 hidden">
-                <ul class="flex flex-col text-left">
-                    <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./index.html">Home</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">About</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Community</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Results</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./news.html">News</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="./events.html">Events</a></li>
-            <li class="list-2"><a class="hover:text-[#006838] hover:text-lg" href="#">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-
-    </nav>
+      </div>
+    </div>
+  </nav>
 
     <main>
         <!-- Slideshow Container -->
@@ -228,54 +322,123 @@
         </section>
     </main>
 
-    <footer class="lg:w-full px-4 flex lg:flex-row flex-col text-white bg-black lg:h-[60vh]">
-        <div class="footer-logo lg:w-2/12 lg:mx-8 lg:-mt-2 w-full flex pt-20 max-lg:pt-14">
-            <img class="lg:w-[150px] h-[100px]  w-[150px] h-[150px]" src="./images/1000-hills-logo.png" alt="Logo">
-        </div>
-        <div class="lg:w-3/12 w-full flex flex-col lg:mx-4 footer-info pt-20 max-lg:pt-8">
-            <p class="text-lg font-bold">TEAM</p>
-            <ul class="mt-9 text-[#6d6e71] w-10/12 text-sm font-thin flex flex-col gap-1  ">
-                <li class="hover:text-white"><a href="#">ROSTER</a></li>
-                <li class="hover:text-white"><a href="#">ACADEMY</a></li>
-                <li class="hover:text-white"><a href="#">COACHING STUFF</a></li>
-                <li class="hover:text-white"><a href="#">SCHEDULE</a></li>
-                <li class="hover:text-white"><a href="#">GALLERY</a></li>
-            </ul>
-        </div>
-        <div class="lg:w-3/12 w-full flex flex-col footer-info pt-20 max-lg:pt-8">
-            <p class="flex text-lg font-bold">CLUB</p>
-            <ul class="flex text-[#6d6e71] flex-col mt-9 gap-1 text-sm font-thin">
-                <li class="hover:text-white"><a href="#">ABOUT US</a></li>
-                <li class="hover:text-white"><a href="#">HISTORY</a></li>
-                <li class="hover:text-white"><a href="./services.html">SERVICES</a></li>
-                <li class="hover:text-white"><a href="#">NEWS & MEDIA</a></li>
-                <li class="hover:text-white"><a href="./contact.html">CONTACT</a></li>
-            </ul>
-        </div>
-        <div class="flex flex-col lg:w-4/12 w-full">
-            <div class="flex flex-col footer-info pt-20 max-lg:pt-8">
-                <p class="flex text-lg font-bold">CONTACT</p>
-                <ul class="flex text-[#6d6e71] flex-col mt-9 gap-1 text-sm font-thin">
-                    <li><a href="#"><i class="text-[#006838] mr-2 fa-solid fa-phone"></i>1-800-1-900</a></li>
-                    <li><a href="#"><i class="text-[#006838] mr-2 fa-solid fa-envelope"></i>info@campo.com</a></li>
-                    <li><a href="#"><i class="text-[#006838] mr-2 fa-solid fa-location-dot"></i>60 East 65th Street,
-                            Minneapolis</a></li>
-                </ul>
-            </div>
-            <div class="flex flex-col mt-9 footer-info max-lg:pb-14">
-                <p class="flex text-lg font-bold">CONNECT</p>
-                <ul class="flex gap-3 mt-4 text-lg font-thin">
-                    <li><a href="https://www.facebook.com/1000hillsrugby/"><i class="fa-brands fa-facebook-f"></i></a>
-                    </li>
-                    <li><a href="https://www.instagram.com/1000hillsrugby/"><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li><a href=" https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08 "><i
-                                class="fa-brands fa-x-twitter"></i></a></li>
-                    <li><a href="https://www.youtube.com/@1000HillsRugby"><i class="fa-brands fa-youtube"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <footer
+  class="w-full px-6 py-12 grid grid-cols-12 gap-y-12 lg:gap-8 text-white bg-gradient-to-b from-black to-gray-900 lg:h-auto"
+>
+  <!-- Logo Section -->
+  <div
+    class="lg:col-span-3 col-span-6 flex items-center justify-center lg:justify-start lg:mx-0 mb-8 lg:mb-0"
+  >
+    <img
+      class="lg:w-[150px] h-[150px] w-[120px] lg:h-[120px] object-contain transition-transform duration-300 hover:scale-105"
+      src="./images/1000-hills-logo.png"
+      alt="Logo"
+    />
+  </div>
+
+  <!-- Team Info Section -->
+  <div
+    class="lg:col-span-3 col-span-6  flex flex-col items-center lg:items-start mb-8 lg:mb-0"
+  >
+    <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">
+      Team
+    </p>
+    <ul class="mt-4 text-[#a5a6a8] text-sm font-light flex flex-col gap-2">
+      <li class="hover:text-[#dcbb26] transition-colors duration-300">
+        <a href="#">Pro Placement Program</a>
+      </li>
+      <li class="hover:text-[#dcbb26] transition-colors duration-300">
+        <a href="#">Academy Development</a>
+      </li>
+      <li class="hover:text-[#dcbb26] transition-colors duration-300">
+        <a href="#">Specialist Program</a>
+      </li>
+      <li class="hover:text-[#dcbb26] transition-colors duration-300">
+        <a href="#">Junior Summer Program</a>
+      </li>
+      <li class="hover:text-[#dcbb26] transition-colors duration-300">
+        <a href="#">Coaching Staff</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Club Info Section -->
+  <div
+    class="lg:col-span-3 col-span-6  flex flex-col items-center lg:items-start mb-8 lg:mb-0"
+  >
+    <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">
+      Club
+    </p>
+    <ul class="mt-4 text-[#a5a6a8] text-sm font-light flex flex-col gap-2">
+      <li class="hover:text-[#dcbb26] transition-colors duration-300">
+        <a href="./about.html">About Us</a>
+      </li>
+      <li class="hover:text-[#dcbb26] transition-colors duration-300">
+        <a href="#">History</a>
+      </li>
+      <li class="hover:text-[#dcbb26] transition-colors duration-300">
+        <a href="./services.html">Services</a>
+      </li>
+      <li class="hover:text-[#dcbb26] transition-colors duration-300">
+        <a href="#">News & Media</a>
+      </li>
+      <li class="hover:text-[#dcbb26] transition-colors duration-300">
+        <a href="./contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Contact & Social Media Section -->
+  <div
+    class="lg:col-span-3  col-span-6 flex flex-col items-center lg:items-start"
+  >
+    <div class="mb-6">
+      <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">
+        Contact
+      </p>
+      <ul class="mt-4 text-[#a5a6a8] text-sm font-light flex flex-col gap-2">
+        <li class="flex items-center hover:text-[#dcbb26] transition-colors duration-300">
+          <i class="text-[#006838] mr-2 fa-solid fa-phone"></i>1-800-1-900
+        </li>
+        <li class="flex items-center hover:text-[#dcbb26] transition-colors duration-300">
+          <i class="text-[#006838] mr-2 fa-solid fa-envelope"></i>info@campo.com
+        </li>
+        <li class="flex items-center hover:text-[#dcbb26] transition-colors duration-300">
+          <i class="text-[#006838] mr-2 fa-solid fa-location-dot"></i>60 East
+          65th Street, Minneapolis
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">
+        Connect
+      </p>
+      <ul class="mt-4 flex gap-4 text-2xl">
+        <li class="hover:text-[#1877F2] transition-colors duration-300">
+          <a href="https://www.facebook.com/1000hillsrugby/" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </li>
+        <li class="hover:text-[#E4405F] transition-colors duration-300">
+          <a href="https://www.instagram.com/1000hillsrugby/" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li class="hover:text-[#1DA1F2] transition-colors duration-300">
+          <a href="https://x.com/1000HillsRugby" aria-label="Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </li>
+        <li class="hover:text-[#FF0000] transition-colors duration-300">
+          <a href="https://www.youtube.com/@1000HillsRugby" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
 </body>
 
 </html>

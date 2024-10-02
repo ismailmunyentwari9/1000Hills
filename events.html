@@ -113,7 +113,7 @@
                     </li>
                     <li>
                         <a class="hover:bg-green-600 hover:text-white px-4 py-2 transition-all duration-300"
-                            href="#">EVENTS<span class="text-yellow-400">&</span>NEWS</a>
+                            href="./events.html">EVENTS<span class="text-yellow-400">&</span>NEWS</a>
                     </li>
                     <li>
                         <a class="hover:bg-green-600 hover:text-white px-4 py-2 transition-all duration-300"
@@ -134,9 +134,9 @@
 
             <!-- Text Content -->
             <div
-                class="text-container col-span-12 z-10 text-white flex flex-col gap-4 pl-6 lg:pl-10 items-start text-center lg:text-left">
+                class="text-container col-span-12 z-10 text-white flex flex-col gap-4 pl-6 lg:pl-10 items-start text-left">
                 <p
-                    class="font-bold text-lg lg:text-2xl uppercase tracking-widest animate__animated animate__fadeIn animate__delay-1s">
+                    class="font-bold text-lg flex flex-wrap lg:text-2xl uppercase tracking-widest animate__animated animate__fadeIn animate__delay-1s">
                     Upcoming Event: Tech Expo 2024
                 </p>
                 <h1 class="font-extrabold leading-tight flex flex-col items-start text-left space-y-2">
@@ -356,91 +356,87 @@
             <!-- Section Header -->
             <div class="border-l-[10px] w-11/12 mx-auto flex my-16 flex-col gap-2 col-span-9 border-[#0B3D39] pl-4">
                 <p class="font-semibold text-lg tracking-widest text-[#4A4A4A]">TRAINING SESSIONS</p>
-                <h1 class="text-6xl font-extrabold">
+                <h1 class="lg:text-6xl text-3xl font-extrabold">
                     WEEKLY <span class="text-gray-500">SCHEDULE</span>
                 </h1>
             </div>
 
             <!-- Schedule Table -->
             <div
-                class="w-11/12 mx-auto border-2 border-[#0B3D39] rounded-3xl overflow-hidden shadow-lg bg-gradient-to-br from-white to-[#E6F4EA]">
-                <table class="w-full text-left text-gray-800">
-                    <!-- Day Schedule Template -->
-                    <thead>
-                        <tr class="bg-[#D4EDDA]">
-                            <th class="py-5 px-8 text-2xl font-bold tracking-wide text-[#0B3D39]">SATURDAY</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b border-gray-300 hover:bg-[#F9F9F9] transition duration-300">
-                            <td class="py-5 px-8 flex items-start gap-6">
-                                <i class="text-5xl fa-solid fa-volleyball text-[#1F75FE]"></i>
-                                <div class="flex flex-col">
-                                    <p class="text-sm text-gray-500"><i class="fa-solid fa-location-dot"></i> SPORT
-                                        ARENA</p>
-                                    <div class="flex items-center gap-4">
-                                        <p class="text-2xl font-semibold text-[#6D6E71]">10:00 - 11:30</p>
-                                        <span class="border border-gray-300 h-4 mx-2"></span>
-                                        <p class="text-2xl font-semibold text-[#0B3D39]">Shooting Drills</p>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="border-b-2 border-[#0B3D39] hover:bg-[#F9F9F9] transition duration-300">
-                            <td class="py-5 px-8 flex items-start gap-6">
-                                <i class="text-5xl fa-solid fa-football text-[#28A745]"></i>
-                                <div class="flex flex-col">
-                                    <p class="text-sm text-gray-500"><i class="fa-solid fa-location-dot"></i> OUTDOOR
-                                        COURT</p>
-                                    <div class="flex items-center gap-4">
-                                        <p class="text-2xl font-semibold text-[#6D6E71]">15:00 - 16:00</p>
-                                        <span class="border border-gray-300 h-4 mx-2"></span>
-                                        <p class="text-2xl font-semibold text-[#0B3D39]">Running Session</p>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-
-                    <!-- Repeat the Day Template for other days -->
-                    <thead>
-                        <tr class="bg-[#D4EDDA]">
-                            <th class="py-5 px-8 text-2xl font-bold tracking-wide text-[#0B3D39]">SUNDAY</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b border-gray-300 hover:bg-[#F9F9F9] transition duration-300">
-                            <td class="py-5 px-8 flex items-start gap-6">
-                                <i class="text-5xl fa-solid fa-basketball text-[#FFA500]"></i>
-                                <div class="flex flex-col">
-                                    <p class="text-sm text-gray-500"><i class="fa-solid fa-location-dot"></i> GYM</p>
-                                    <div class="flex items-center gap-4">
-                                        <p class="text-2xl font-semibold text-[#6D6E71]">10:00 - 11:30</p>
-                                        <span class="border border-gray-300 h-4 mx-2"></span>
-                                        <p class="text-2xl font-semibold text-[#0B3D39]">Strength And Conditioning</p>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="border-b-2 border-[#0B3D39] hover:bg-[#F9F9F9] transition duration-300">
-                            <td class="py-5 px-8 flex items-start gap-6">
-                                <i class="text-5xl fa-solid fa-bowling-ball text-[#FF4500]"></i>
-                                <div class="flex flex-col">
-                                    <p class="text-sm text-gray-500"><i class="fa-solid fa-location-dot"></i> SPORT
-                                        ARENA</p>
-                                    <div class="flex items-center gap-4">
-                                        <p class="text-2xl font-semibold text-[#6D6E71]">12:00 - 13:30</p>
-                                        <span class="border border-gray-300 h-4 mx-2"></span>
-                                        <p class="text-2xl font-semibold text-[#0B3D39]">Offensive Moves</p>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-
-                    <!-- Repeat similar structures for Wednesday, Thursday, Friday, and Saturday -->
-                </table>
-            </div>
+            class="w-11/12 lg:w-10/12 mx-auto border-2 border-[#0B3D39] rounded-3xl overflow-hidden shadow-lg bg-gradient-to-br from-white to-[#E6F4EA]">
+            <table class="w-full text-left text-gray-800">
+              <!-- Day Schedule Template -->
+              <thead>
+                <tr class="bg-[#D4EDDA]">
+                  <th class="py-4 px-4 lg:py-5 lg:px-8 text-xl lg:text-2xl font-bold tracking-wide text-[#0B3D39]">SATURDAY</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-300 hover:bg-[#F9F9F9] transition duration-300">
+                  <td class="py-4 px-4 lg:py-5 lg:px-8 flex flex-col lg:flex-row items-start gap-4 lg:gap-6">
+                    <i class="text-3xl lg:text-5xl fa-solid fa-volleyball text-[#1F75FE]"></i>
+                    <div class="flex flex-col">
+                      <p class="text-xs lg:text-sm text-gray-500"><i class="fa-solid fa-location-dot"></i> SPORT ARENA</p>
+                      <div class="flex flex-col lg:flex-row items-start lg:items-center gap-2 lg:gap-4">
+                        <p class="text-lg lg:text-2xl font-semibold text-[#6D6E71]">10:00 - 11:30</p>
+                        <span class="border border-gray-300 h-4 hidden lg:inline-block mx-2"></span>
+                        <p class="text-lg lg:text-2xl font-semibold text-[#0B3D39]">Shooting Drills</p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-b-2 border-[#0B3D39] hover:bg-[#F9F9F9] transition duration-300">
+                  <td class="py-4 px-4 lg:py-5 lg:px-8 flex flex-col lg:flex-row items-start gap-4 lg:gap-6">
+                    <i class="text-3xl lg:text-5xl fa-solid fa-football text-[#28A745]"></i>
+                    <div class="flex flex-col">
+                      <p class="text-xs lg:text-sm text-gray-500"><i class="fa-solid fa-location-dot"></i> OUTDOOR COURT</p>
+                      <div class="flex flex-col lg:flex-row items-start lg:items-center gap-2 lg:gap-4">
+                        <p class="text-lg lg:text-2xl font-semibold text-[#6D6E71]">15:00 - 16:00</p>
+                        <span class="border border-gray-300 h-4 hidden lg:inline-block mx-2"></span>
+                        <p class="text-lg lg:text-2xl font-semibold text-[#0B3D39]">Running Session</p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+          
+              <!-- Repeat the Day Template for other days -->
+              <thead>
+                <tr class="bg-[#D4EDDA]">
+                  <th class="py-4 px-4 lg:py-5 lg:px-8 text-xl lg:text-2xl font-bold tracking-wide text-[#0B3D39]">SUNDAY</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-300 hover:bg-[#F9F9F9] transition duration-300">
+                  <td class="py-4 px-4 lg:py-5 lg:px-8 flex flex-col lg:flex-row items-start gap-4 lg:gap-6">
+                    <i class="text-3xl lg:text-5xl fa-solid fa-basketball text-[#FFA500]"></i>
+                    <div class="flex flex-col">
+                      <p class="text-xs lg:text-sm text-gray-500"><i class="fa-solid fa-location-dot"></i> GYM</p>
+                      <div class="flex flex-col lg:flex-row items-start lg:items-center gap-2 lg:gap-4">
+                        <p class="text-lg lg:text-2xl font-semibold text-[#6D6E71]">10:00 - 11:30</p>
+                        <span class="border border-gray-300 h-4 hidden lg:inline-block mx-2"></span>
+                        <p class="text-lg lg:text-2xl font-semibold text-[#0B3D39]">Strength And Conditioning</p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="border-b-2 border-[#0B3D39] hover:bg-[#F9F9F9] transition duration-300">
+                  <td class="py-4 px-4 lg:py-5 lg:px-8 flex flex-col lg:flex-row items-start gap-4 lg:gap-6">
+                    <i class="text-3xl lg:text-5xl fa-solid fa-bowling-ball text-[#FF4500]"></i>
+                    <div class="flex flex-col">
+                      <p class="text-xs lg:text-sm text-gray-500"><i class="fa-solid fa-location-dot"></i> SPORT ARENA</p>
+                      <div class="flex flex-col lg:flex-row items-start lg:items-center gap-2 lg:gap-4">
+                        <p class="text-lg lg:text-2xl font-semibold text-[#6D6E71]">12:00 - 13:30</p>
+                        <span class="border border-gray-300 h-4 hidden lg:inline-block mx-2"></span>
+                        <p class="text-lg lg:text-2xl font-semibold text-[#0B3D39]">Offensive Moves</p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
         </section>
 
         <section class="mb-14  py-12">
@@ -481,7 +477,7 @@
                 <h2 class="text-5xl font-extrabold mb-6 text-[#0B3D39] tracking-wide drop-shadow-sm">
                     Our Sponsors
                 </h2>
-                <p class="text-lg mb-12 text-gray-700 lg:w-[60%] md:w-[75%] w-[90%] leading-relaxed drop-shadow-sm">
+                <p class="text-lg mb-12 text-gray-700 lg:w-[60%] md:w-[75%] w-[90%] leading-relaxed drop-shadow-sm lg:text-center text-start">
                     We are immensely proud and grateful to be supported by these outstanding companies and
                     organizations. Their generous contributions, dedication, and partnership play a crucial role in
                     bringing this event to life, ensuring its success, and helping us achieve our shared goals.
@@ -528,7 +524,7 @@
                 <h2 class=" text-6xl font-extrabold mb-6 tracking-wider drop-shadow-lg">
                     Register Now
                 </h2>
-                <p class=" text-lg mb-10 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
+                <p class="lg:text-center text-start text-lg mb-10 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
                     Don’t miss out on this incredible opportunity! This is your chance to gain invaluable skills,
                     connect with industry experts, and collaborate with like-minded individuals. Secure your spot today
                     and be part of something special! Join us for a transformative experience that will not only enhance
@@ -550,87 +546,122 @@
     </main>
 
     <footer
-        class="lg:w-full px-8 py-16 flex lg:flex-row flex-col text-white bg-gradient-to-b from-black to-gray-900 lg:h-[60vh]">
-        <!-- Logo Section -->
-        <div
-            class="footer-logo lg:w-2/12 w-full flex items-center justify-center lg:justify-start lg:mx-8 mb-8 lg:mb-0">
-            <img class="lg:w-[150px] h-[150px] w-[120px] lg:h-[120px] object-contain transition-transform duration-300 hover:scale-105"
-                src="./images/1000-hills-logo.png" alt="Logo" />
-        </div>
-
-        <!-- Team Info Section -->
-        <div class="lg:w-3/12 w-full flex flex-col lg:mx-4 footer-info mb-8 lg:mb-0">
-            <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">Team</p>
-            <ul class="mt-6 text-[#a5a6a8] text-sm font-light flex flex-col gap-3">
-                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="#">Pro Placement Program</a>
-                </li>
-                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="#">Academy Development</a></li>
-                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="#">Specialist Program</a></li>
-                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="#">Junior Summer Program</a>
-                </li>
-                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="#">Coaching Staff</a></li>
-            </ul>
-        </div>
-
-        <!-- Club Info Section -->
-        <div class="lg:w-3/12 w-full flex flex-col mb-8 lg:mb-0">
-            <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">Club</p>
-            <ul class="mt-6 text-[#a5a6a8] text-sm font-light flex flex-col gap-3">
-                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="./about.html">About Us</a></li>
-                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="#">History</a></li>
-                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="./services.html">Services</a>
-                </li>
-                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="#">News & Media</a></li>
-                <li class="hover:text-[#dcbb26] transition-colors duration-300"><a href="./contact.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="lg:w-4/12 w-full flex flex-col">
-            <div class="mb-8">
-                <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">Contact</p>
-                <ul class="mt-6 text-[#a5a6a8] text-sm font-light flex flex-col gap-3">
-                    <li class="flex items-center hover:text-[#dcbb26] transition-colors duration-300">
-                        <i class="text-[#006838] mr-2 fa-solid fa-phone"></i>1-800-1-900
-                    </li>
-                    <li class="flex items-center hover:text-[#dcbb26] transition-colors duration-300">
-                        <i class="text-[#006838] mr-2 fa-solid fa-envelope"></i>info@campo.com
-                    </li>
-                    <li class="flex items-center hover:text-[#dcbb26] transition-colors duration-300">
-                        <i class="text-[#006838] mr-2 fa-solid fa-location-dot"></i>60 East 65th Street, Minneapolis
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Social Media Section -->
-            <div>
-                <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">Connect</p>
-                <ul class="mt-4 flex gap-6 text-2xl">
-                    <li class="hover:text-[#1877F2] transition-colors duration-300">
-                        <a href="https://www.facebook.com/1000hillsrugby/" aria-label="Facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li class="hover:text-[#E4405F] transition-colors duration-300">
-                        <a href="https://www.instagram.com/1000hillsrugby/" aria-label="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="hover:text-[#1DA1F2] transition-colors duration-300">
-                        <a href="https://x.com/1000HillsRugby?t=S0PTUa88AFrp6SJs5meJ6A&s=08" aria-label="Twitter">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="hover:text-[#FF0000] transition-colors duration-300">
-                        <a href="https://www.youtube.com/@1000HillsRugby" aria-label="YouTube">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    class="w-full px-6 py-12 grid grid-cols-12 gap-y-12 lg:gap-8 text-white bg-gradient-to-b from-black to-gray-900 lg:h-auto"
+  >
+    <!-- Logo Section -->
+    <div
+      class="lg:col-span-3 col-span-6 flex items-center justify-center lg:justify-start lg:mx-0 mb-8 lg:mb-0"
+    >
+      <img
+        class="lg:w-[150px] h-[150px] w-[120px] lg:h-[120px] object-contain transition-transform duration-300 hover:scale-105"
+        src="./images/1000-hills-logo.png"
+        alt="Logo"
+      />
+    </div>
+  
+    <!-- Team Info Section -->
+    <div
+      class="lg:col-span-3 col-span-6  flex flex-col items-center lg:items-start mb-8 lg:mb-0"
+    >
+      <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">
+        Team
+      </p>
+      <ul class="mt-4 text-[#a5a6a8] text-sm font-light flex flex-col gap-2">
+        <li class="hover:text-[#dcbb26] transition-colors duration-300">
+          <a href="#">Pro Placement Program</a>
+        </li>
+        <li class="hover:text-[#dcbb26] transition-colors duration-300">
+          <a href="#">Academy Development</a>
+        </li>
+        <li class="hover:text-[#dcbb26] transition-colors duration-300">
+          <a href="#">Specialist Program</a>
+        </li>
+        <li class="hover:text-[#dcbb26] transition-colors duration-300">
+          <a href="#">Junior Summer Program</a>
+        </li>
+        <li class="hover:text-[#dcbb26] transition-colors duration-300">
+          <a href="#">Coaching Staff</a>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Club Info Section -->
+    <div
+      class="lg:col-span-3 col-span-6  flex flex-col items-center lg:items-start mb-8 lg:mb-0"
+    >
+      <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">
+        Club
+      </p>
+      <ul class="mt-4 text-[#a5a6a8] text-sm font-light flex flex-col gap-2">
+        <li class="hover:text-[#dcbb26] transition-colors duration-300">
+          <a href="./about.html">About Us</a>
+        </li>
+        <li class="hover:text-[#dcbb26] transition-colors duration-300">
+          <a href="#">History</a>
+        </li>
+        <li class="hover:text-[#dcbb26] transition-colors duration-300">
+          <a href="./services.html">Services</a>
+        </li>
+        <li class="hover:text-[#dcbb26] transition-colors duration-300">
+          <a href="#">News & Media</a>
+        </li>
+        <li class="hover:text-[#dcbb26] transition-colors duration-300">
+          <a href="./contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Contact & Social Media Section -->
+    <div
+      class="lg:col-span-3  col-span-6 flex flex-col items-center lg:items-start"
+    >
+      <div class="mb-6">
+        <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">
+          Contact
+        </p>
+        <ul class="mt-4 text-[#a5a6a8] text-sm font-light flex flex-col gap-2">
+          <li class="flex items-center hover:text-[#dcbb26] transition-colors duration-300">
+            <i class="text-[#006838] mr-2 fa-solid fa-phone"></i>1-800-1-900
+          </li>
+          <li class="flex items-center hover:text-[#dcbb26] transition-colors duration-300">
+            <i class="text-[#006838] mr-2 fa-solid fa-envelope"></i>info@campo.com
+          </li>
+          <li class="flex items-center hover:text-[#dcbb26] transition-colors duration-300">
+            <i class="text-[#006838] mr-2 fa-solid fa-location-dot"></i>60 East
+            65th Street, Minneapolis
+          </li>
+        </ul>
+      </div>
+  
+      <div>
+        <p class="text-lg font-bold tracking-wide text-[#dcbb26] uppercase">
+          Connect
+        </p>
+        <ul class="mt-4 flex gap-4 text-2xl">
+          <li class="hover:text-[#1877F2] transition-colors duration-300">
+            <a href="https://www.facebook.com/1000hillsrugby/" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="hover:text-[#E4405F] transition-colors duration-300">
+            <a href="https://www.instagram.com/1000hillsrugby/" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li class="hover:text-[#1DA1F2] transition-colors duration-300">
+            <a href="https://x.com/1000HillsRugby" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+          <li class="hover:text-[#FF0000] transition-colors duration-300">
+            <a href="https://www.youtube.com/@1000HillsRugby" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
